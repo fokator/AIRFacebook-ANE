@@ -46,7 +46,8 @@
 
         <!-- copy the ios lib to the base temp ios directory -->
         <copy file="temp/${IOS_DIR}/build/Release-${IOS_TARGET}/lib${name}.a" todir="temp/${IOS_DIR}" overwrite="true"/>
-
+        <copy file="../ios/Frameworks/libclang_rt.ios.a" todir="temp/${IOS_DIR}" overwrite="true" />
+        
         <delete dir="temp/${IOS_DIR}/FBSDKCoreKit.framework"/>
         <delete dir="temp/${IOS_DIR}/FBSDKLoginKit.framework"/>
         <delete dir="temp/${IOS_DIR}/FBSDKMessengerShareKit.framework"/>
