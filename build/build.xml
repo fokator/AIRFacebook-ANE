@@ -47,7 +47,7 @@
         <!-- copy the ios lib to the base temp ios directory -->
         <copy file="temp/${IOS_DIR}/build/Release-${IOS_TARGET}/lib${name}.a" todir="temp/${IOS_DIR}" overwrite="true"/>
         <copy file="../ios/Frameworks/libclang_rt.ios.a" todir="temp/${IOS_DIR}" overwrite="true" />
-        
+
         <delete dir="temp/${IOS_DIR}/FBSDKCoreKit.framework"/>
         <delete dir="temp/${IOS_DIR}/FBSDKLoginKit.framework"/>
         <delete dir="temp/${IOS_DIR}/FBSDKMessengerShareKit.framework"/>
@@ -112,12 +112,12 @@
         <move file="temp/android/aar/classes.jar" tofile="temp/android/lib${name}.jar" overwrite="true" />
         <copy file="../android/libs/bolts-applinks-1.4.0.jar" tofile="temp/android/bolts-applinks-1.4.0.jar" overwrite="true" />
         <copy file="../android/libs/bolts-tasks-1.4.0.jar" tofile="temp/android/bolts-tasks-1.4.0.jar" overwrite="true" />
-        <copy file="../android/libs/facebook-applinks-4.38.0.jar" tofile="temp/android/facebook-applinks-4.38.0.jar" overwrite="true" />
-        <copy file="../android/libs/facebook-common-4.38.0.jar" tofile="temp/android/facebook-common-4.38.0.jar" overwrite="true" />
-        <copy file="../android/libs/facebook-core-4.38.0.jar" tofile="temp/android/facebook-core-4.38.0.jar" overwrite="true" />
-        <copy file="../android/libs/facebook-login-4.38.0.jar" tofile="temp/android/facebook-login-4.38.0.jar" overwrite="true" />
-        <copy file="../android/libs/facebook-messenger-4.38.0.jar" tofile="temp/android/facebook-messenger-4.38.0.jar" overwrite="true" />
-        <copy file="../android/libs/facebook-share-4.38.0.jar" tofile="temp/android/facebook-share-4.38.0.jar" overwrite="true" />
+        <copy file="../android/libs/facebook-applinks-4.40.0.jar" tofile="temp/android/facebook-applinks-4.40.0.jar" overwrite="true" />
+        <copy file="../android/libs/facebook-common-4.40.0.jar" tofile="temp/android/facebook-common-4.40.0.jar" overwrite="true" />
+        <copy file="../android/libs/facebook-core-4.40.0.jar" tofile="temp/android/facebook-core-4.40.0.jar" overwrite="true" />
+        <copy file="../android/libs/facebook-login-4.40.0.jar" tofile="temp/android/facebook-login-4.40.0.jar" overwrite="true" />
+        <copy file="../android/libs/facebook-messenger-4.40.0.jar" tofile="temp/android/facebook-messenger-4.40.0.jar" overwrite="true" />
+        <copy file="../android/libs/facebook-share-4.40.0.jar" tofile="temp/android/facebook-share-4.40.0.jar" overwrite="true" />
         <copy file="../android/libs/google-zxing-3.3.0.jar" tofile="temp/android/google-zxing-3.3.0.jar" overwrite="true" />
         <!-- copy resources -->
         <copy todir="temp/android/com.marpies.ane.facebook-common-res/">
@@ -171,7 +171,7 @@
         <copy file="temp/swc/content/library.swf" todir="temp/default" overwrite="true"/>
 		<delete dir="temp/swc/content/"/>
     </target>
-    
+
     <target name="swc-ios" description="Build iOS SWC library">
 		<mkdir dir="temp/swc/content/" />
 
@@ -199,7 +199,7 @@
 		<delete dir="temp/swc/content/"/>
 		<delete file="temp/swc/${name}.swc" />
 	</target>
-	
+
 	<target name="swc-android" description="Build Android SWC library">
 		<mkdir dir="temp/swc/content/" />
 

@@ -14,3 +14,4 @@ android/$buildDir
 bin
 ios/AIRFacebook.xcodeproj/xcuserdata
 docs
+local.properties
