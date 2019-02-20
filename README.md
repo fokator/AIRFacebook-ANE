@@ -13,7 +13,7 @@ AIRFacebook offers a rich and cross-platform API to Facebook SDK for iOS and And
 
 ## Native SDK versions
 
-* iOS `v4.40.0`
+* iOS `v4.39.1`
 * Android `v4.40.0`
 
 ## Getting started
