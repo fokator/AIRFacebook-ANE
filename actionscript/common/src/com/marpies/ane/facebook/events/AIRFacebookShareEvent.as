@@ -17,8 +17,7 @@
 package com.marpies.ane.facebook.events {
 
     /**
-     * Dispatched after a call to any of the sharing methods, including
-     * <code>AIRFacebook.showAppInviteDialog()</code>.
+     * Dispatched after a call to any of the sharing methods.
      */
     public class AIRFacebookShareEvent extends AIRFacebookCancellableEvent {
 

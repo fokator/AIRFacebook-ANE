@@ -106,7 +106,7 @@ NS_SWIFT_NAME(GameRequestContent)
 @property (nonatomic, copy) NSString *objectID;
 
 /**
-  An array of user IDs, usernames or invite tokens (NSString) of people to send request.
+  An array of user IDs, usernames (NSString) of people to send request.
 
  These may or may not be a friend of the sender. If this is specified by the app,
  the sender will not have a choice of recipients. If not, the sender will see a multi-friend selector

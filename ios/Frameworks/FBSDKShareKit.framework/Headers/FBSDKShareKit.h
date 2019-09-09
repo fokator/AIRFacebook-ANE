@@ -41,7 +41,6 @@
 
 #if !TARGET_OS_TV
 #import <FBSDKShareKit/FBSDKAppGroupContent.h>
-#import <FBSDKShareKit/FBSDKAppInviteContent.h>
 #import <FBSDKShareKit/FBSDKGameRequestContent.h>
 #import <FBSDKShareKit/FBSDKGameRequestDialog.h>
 #import <FBSDKShareKit/FBSDKLiking.h>

@@ -57,8 +57,6 @@ public class AIRFacebookExtensionContext extends FREContext {
 		functions.put( "shareMessageWithLink", new ShareLinkFunction() );
 		functions.put( "shareMessageWithPhoto", new SharePhotoFunction() );
 		functions.put( "shareOpenGraphStory", new ShareOpenGraphStoryFunction() );
-		functions.put( "canShowAppInviteDialog", new CanShowAppInviteDialogFunction() );
-		functions.put( "showAppInviteDialog", new ShowAppInviteDialogFunction() );
 		functions.put( "canShowGameRequestDialog", new CanShowGameRequestDialogFunction() );
 		functions.put( "showGameRequestDialog", new ShowGameRequestDialogFunction() );
 		/* Misc */

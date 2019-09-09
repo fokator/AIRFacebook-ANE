@@ -27,7 +27,6 @@ import com.facebook.FacebookException;
 import com.facebook.internal.FacebookDialogBase;
 import com.facebook.share.Sharer;
 import com.facebook.share.model.*;
-import com.facebook.share.widget.AppInviteDialog;
 import com.facebook.share.widget.GameRequestDialog;
 import com.facebook.share.widget.MessageDialog;
 import com.facebook.share.widget.ShareDialog;
@@ -73,9 +72,6 @@ public class ShareActivity extends Activity {
 				return;
 			case OPEN_GRAPH_STORY:
 				shareOpenGraphStory( extras );
-				return;
-			case APP_INVITE:
-				showAppInviteDialog( extras );
 				return;
 			case GAME_REQUEST:
 				showGameRequestDialog( extras );
@@ -164,20 +160,6 @@ public class ShareActivity extends Activity {
 		dialogBase.show( content );
 	}
 
-	private void showAppInviteDialog( Bundle extras ) {
-		AppInviteContent.Builder content = new AppInviteContent.Builder()
-				.setApplinkUrl( extras.getString( extraPrefix + ".appLinkURL" ) );
-		if( extras.containsKey( extraPrefix + ".imageURL" ) ) {
-			content.setPreviewImageUrl( extras.getString( extraPrefix + ".imageURL" ) );
-		}
-
-		AIR.log( "[ShareActivity] showing AppInvite dialog." );
-
-		AppInviteDialog dialog = new AppInviteDialog( this );
-		dialog.registerCallback( mCallbackManager, getAppInviteCallback() );
-		dialog.show( content.build() );
-	}
-
 	private void showGameRequestDialog( Bundle extras ) {
 		GameRequestContent.Builder content = new GameRequestContent.Builder()
 				.setMessage( extras.getString( extraPrefix + ".message" ) );
@@ -258,44 +240,6 @@ public class ShareActivity extends Activity {
 	}
 
 	/**
-	 * App Invite callbacks
-	 */
-
-	private void onAppInviteSucceeded( AppInviteDialog.Result inviteResult ) {
-		mShareCallbackType = AIRFacebookShareType.APP_INVITE;
-		AIR.log( "[ShareActivity] app invite callback - success" );
-		AIR.dispatchEvent( AIRFacebookEvent.SHARE_SUCCESS, StringUtils.getSingleValueJSONString( mListenerID, "appInvite", "true" ) );
-
-		// inviteResult.getData() contains only 'didComplete' Boolean
-
-		onShareFinish();
-	}
-
-	private void onAppInviteCancelled() {
-		mShareCallbackType = AIRFacebookShareType.APP_INVITE;
-		AIR.log( "[ShareActivity] app invite callback - cancelled" );
-		dispatchAppInviteCancel();
-	}
-
-	private void onAppInviteError( FacebookException error ) {
-		mShareCallbackType = AIRFacebookShareType.APP_INVITE;
-		AIR.log( "[ShareActivity] app invite callback - error: " + error.getMessage() );
-		AIR.dispatchEvent( AIRFacebookEvent.SHARE_ERROR, String.format(
-				StringUtils.locale,
-				"{ \"listenerID\": %d, \"errorMessage\": \"%s\", \"appInvite\": \"true\" }",
-				mListenerID,
-				StringUtils.removeLineBreaks( error.getMessage() )
-		) );
-
-		onShareFinish();
-	}
-
-	private void dispatchAppInviteCancel() {
-		AIR.dispatchEvent( AIRFacebookEvent.SHARE_CANCEL, StringUtils.getSingleValueJSONString( mListenerID, "appInvite", "true" ) );
-		onShareFinish();
-	}
-
-	/**
 	 * Game Request callbacks
 	 */
 
@@ -358,16 +302,6 @@ public class ShareActivity extends Activity {
 	protected void onActivityResult( int requestCode, int resultCode, Intent data ) {
 		super.onActivityResult( requestCode, resultCode, data );
 		mCallbackManager.onActivityResult( requestCode, resultCode, data );
-
-		new Handler().postDelayed( new Runnable() {
-			@Override
-			public void run() {
-				/* If mShareCallbackType is NONE then it means the callback was not called */
-				if( mShareCallbackType == AIRFacebookShareType.NONE && mShareType == AIRFacebookShareType.APP_INVITE ) {
-					dispatchAppInviteCancel();
-				}
-			}
-		}, 50 );
 	}
 
 	/**
@@ -412,25 +346,6 @@ public class ShareActivity extends Activity {
 			@Override
 			public void onError( FacebookException error ) {
 				onGameRequestError( error );
-			}
-		};
-	}
-
-	private FacebookCallback<AppInviteDialog.Result> getAppInviteCallback() {
-		return new FacebookCallback<AppInviteDialog.Result>() {
-			@Override
-			public void onSuccess( AppInviteDialog.Result result ) {
-				onAppInviteSucceeded( result );
-			}
-
-			@Override
-			public void onCancel() {
-				onAppInviteCancelled();
-			}
-
-			@Override
-			public void onError( FacebookException error ) {
-				onAppInviteError( error );
 			}
 		};
 	}

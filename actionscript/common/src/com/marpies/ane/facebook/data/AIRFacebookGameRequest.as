@@ -49,7 +49,7 @@ package com.marpies.ane.facebook.data {
         }
 
         /**
-         * Returns one of the values specified in <code>AIRFacebookGameRequestActionType</code> or <code>"invite"</code>.
+         * Returns one of the values specified in <code>AIRFacebookGameRequestActionType</code>.
          */
         public function get actionType():String {
             return ("action_type" in mProperties) ? mProperties.action_type : AIRFacebookGameRequestActionType.NONE;

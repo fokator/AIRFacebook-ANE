@@ -16,7 +16,6 @@
 
 package com.marpies.ane.facebook.share {
 
-	import com.marpies.ane.facebook.listeners.IAIRFacebookAppInviteListener;
 	import com.marpies.ane.facebook.listeners.IAIRFacebookShareListener;
 
 	import flash.events.IEventDispatcher;
@@ -141,26 +140,6 @@ package com.marpies.ane.facebook.share {
 		function openGraphStory( actionType:String, objectType:String, title:String, image:Object = null, objectProperties:Object = null, listener:IAIRFacebookShareListener = null ):void;
 
 		/**
-		 * Opens up web dialog or native Facebook app with an option to send app invitation.
-		 * Friends who already have your app installed will not receive the invitation.
-		 *
-		 * @param appLinkURL App link for what should be opened when the recipient clicks on the install/play
-		 *                   button on the app invite page. See Facebook docs on how to generate an app link.
-		 * @param imageURL URL to an image to be used in the invite. If a <code>imageURL</code> is not set
-		 *                 the invite will use Promotional Images from the App Details section in Facebook apps settings.
-		 *                 The invite will not show if no images are available.
-		 * @param listener Object that will be notified about the invitation process result.
-		 *
-		 * @event shareResult com.marpies.ane.facebook.events.AIRFacebookShareEvent Dispatched when the result
-		 *        of the invitation process is obtained.
-		 *
-		 * @see #canShareAppInvite
-		 * @see http://developers.facebook.com/docs/app-invites
-		 * @see http://developers.facebook.com/docs/applinks
-		 */
-		[Deprecated(since="2.0.0", message="App invitation has been deprecated by Facebook.")] function appInvite( appLinkURL:String, imageURL:String = null, listener:IAIRFacebookAppInviteListener = null ):void;
-
-		/**
 		 * Call this to find out if link sharing is possible on current device.
 		 *
 		 * @see #link()
@@ -198,13 +177,6 @@ package com.marpies.ane.facebook.share {
 		 * @see #openGraphStory()
 		 */
 		function get canShareOpenGraphStory():Boolean;
-
-		/**
-		 * Call this to find out if an app invite dialog can be presented on current device.
-		 *
-		 * @see #appInvite()
-		 */
-		[Deprecated(since="2.0.0", message="App invitation has been deprecated by Facebook.")] function get canShareAppInvite():Boolean;
 
 	}
 

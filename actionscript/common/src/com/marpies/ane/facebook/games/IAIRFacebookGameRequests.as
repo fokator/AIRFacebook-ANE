@@ -47,7 +47,7 @@ package com.marpies.ane.facebook.games {
 		 * @param data Optional data which can be used for tracking; maximum 255 characters.
 		 * @param suggestedFriends An array of user IDs that will be included in the dialog as the first suggested friends.
 		 *                         Cannot be used together with <code>friendsFilter</code>.
-		 * @param recipients List of user IDs, usernames or invite tokens of people to send the request to. If this is
+		 * @param recipients List of user IDs, usernames to send the request to. If this is
 		 *                   not specified, a friend selector will be displayed and the user can select up to 50 friends.
 		 * @param listener Object that will be notified about the request result.
 		 *

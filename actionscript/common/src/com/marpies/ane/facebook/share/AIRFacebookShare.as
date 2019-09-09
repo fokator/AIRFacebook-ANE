@@ -19,7 +19,6 @@ package com.marpies.ane.facebook.share {
 	import com.marpies.ane.facebook.AIRFacebookListenerMap;
 	import com.marpies.ane.facebook.IAIRFacebook;
 	import com.marpies.ane.facebook.events.AIRFacebookShareEvent;
-	import com.marpies.ane.facebook.listeners.IAIRFacebookAppInviteListener;
 	import com.marpies.ane.facebook.listeners.IAIRFacebookShareListener;
 
 	import flash.display.BitmapData;
@@ -161,27 +160,6 @@ package com.marpies.ane.facebook.share {
 		/**
 		 * @inheritDoc
 		 */
-		public function appInvite( appLinkURL:String, imageURL:String = null, listener:IAIRFacebookAppInviteListener = null ):void {
-			if( !canShareAppInvite ) {
-				const shareEvent:AIRFacebookShareEvent = new AIRFacebookShareEvent( AIRFacebookShareEvent.SHARE_RESULT );
-				shareEvent.ns_airfacebook_internal::errorMessage = "Device is not capable of showing an app invite dialog.";
-				dispatchEvent( shareEvent );
-
-				// Listener
-				if( listener != null ) {
-					listener.onFacebookAppInviteError( shareEvent.errorMessage );
-				}
-				return;
-			}
-
-			if( !appLinkURL ) throw new ArgumentError( "Parameter appLinkURL cannot be null." );
-
-			_context.call( "showAppInviteDialog", appLinkURL, imageURL, registerListener( listener ) );
-		}
-
-		/**
-		 * @inheritDoc
-		 */
 		public function get canShareLink():Boolean {
 			if( !_facebook.isSupported ) {
 				return false;
@@ -232,17 +210,6 @@ package com.marpies.ane.facebook.share {
 			}
 
 			return _context.call( "canShareContent", "OPEN_GRAPH" ) as Boolean;
-		}
-
-		/**
-		 * @inheritDoc
-		 */
-		public function get canShareAppInvite():Boolean {
-			if( !_facebook.isSupported ) {
-				return false;
-			}
-
-			return _context.call( "canShowAppInviteDialog" ) as Boolean;
 		}
 
 		/**
@@ -298,77 +265,20 @@ package com.marpies.ane.facebook.share {
 					// Share success - set post ID
 				case SHARE_SUCCESS:
 					eventJSON = JSON.parse( event.level );
-					if( "appInvite" in eventJSON ) {
-						onAppInviteSuccessHandler( eventJSON );
-					} else {
-						onShareSuccessHandler( eventJSON );
-					}
+					onShareSuccessHandler( eventJSON );
 					return;
 
 					// Share error - set error message
 				case SHARE_ERROR:
 					eventJSON = JSON.parse( event.level );
-					if( "appInvite" in eventJSON ) {
-						onAppInviteErrorHandler( eventJSON );
-					} else {
-						onShareErrorHandler( eventJSON );
-					}
+					onShareErrorHandler( eventJSON );
 					return;
 
 					// Share cancelled - set cancel flag
 				case SHARE_CANCEL:
 					eventJSON = JSON.parse( event.level );
-					if( "appInvite" in eventJSON ) {
-						onAppInviteCancelHandler( eventJSON );
-					} else {
-						onShareCancelHandler( eventJSON );
-					}
+					onShareCancelHandler( eventJSON );
 					return;
-			}
-		}
-
-		/**
-		 * APP INVITE
-		 */
-
-		private function onAppInviteSuccessHandler( eventJSON:Object ):void {
-			// Dispatch event
-			const event:AIRFacebookShareEvent = new AIRFacebookShareEvent( AIRFacebookShareEvent.SHARE_RESULT );
-			dispatchEvent( event );
-
-			// Listener
-			const listenerID:int = eventJSON.listenerID;
-			const listener:IAIRFacebookAppInviteListener = popListener( listenerID ) as IAIRFacebookAppInviteListener;
-			if( listener != null ) {
-				listener.onFacebookAppInviteSuccess();
-			}
-		}
-
-		private function onAppInviteErrorHandler( eventJSON:Object ):void {
-			// Dispatch event
-			const event:AIRFacebookShareEvent = new AIRFacebookShareEvent( AIRFacebookShareEvent.SHARE_RESULT );
-			event.ns_airfacebook_internal::errorMessage = eventJSON.errorMessage;
-			dispatchEvent( event );
-
-			// Listener
-			const listenerID:int = eventJSON.listenerID;
-			const listener:IAIRFacebookAppInviteListener = popListener( listenerID ) as IAIRFacebookAppInviteListener;
-			if( listener != null ) {
-				listener.onFacebookAppInviteError( event.errorMessage );
-			}
-		}
-
-		private function onAppInviteCancelHandler( eventJSON:Object ):void {
-			// Dispatch event
-			const event:AIRFacebookShareEvent = new AIRFacebookShareEvent( AIRFacebookShareEvent.SHARE_RESULT );
-			event.ns_airfacebook_internal::wasCancelled = true;
-			dispatchEvent( event );
-
-			// Listener
-			const listenerID:int = eventJSON.listenerID;
-			const listener:IAIRFacebookAppInviteListener = popListener( listenerID ) as IAIRFacebookAppInviteListener;
-			if( listener != null ) {
-				listener.onFacebookAppInviteCancel();
 			}
 		}
 
