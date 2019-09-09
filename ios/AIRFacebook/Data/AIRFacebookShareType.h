@@ -25,7 +25,6 @@ typedef enum {
     AIRFBShareType_MESSAGE_LINK,
     AIRFBShareType_MESSAGE_PHOTO,
     AIRFBShareType_OPEN_GRAPH,
-    AIRFBShareType_APP_INVITE,
     AIRFBShareType_GAME_REQUEST
 } AIRFBShareType;
 

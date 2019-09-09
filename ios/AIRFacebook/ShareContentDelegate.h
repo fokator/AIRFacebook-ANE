@@ -17,7 +17,7 @@
 #import <Foundation/Foundation.h>
 #import <FBSDKShareKit/FBSDKShareKit.h>
 
-@interface ShareContentDelegate : NSObject <FBSDKSharingDelegate, FBSDKAppInviteDialogDelegate, FBSDKGameRequestDialogDelegate>
+@interface ShareContentDelegate : NSObject <FBSDKSharingDelegate, FBSDKGameRequestDialogDelegate>
 
 + (nonnull ShareContentDelegate*) sharedInstance;
 

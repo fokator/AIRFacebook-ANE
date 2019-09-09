@@ -13,7 +13,6 @@
 		C305E9531B8B38B5008F53FF /* AIRFacebookShareType.m in Sources */ = {isa = PBXBuildFile; fileRef = C305E90B1B8B38B5008F53FF /* AIRFacebookShareType.m */; };
 		C305E9551B8B38B5008F53FF /* ApplicationOpenURLFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = C305E9101B8B38B5008F53FF /* ApplicationOpenURLFunction.m */; };
 		C305E9561B8B38B5008F53FF /* CanShareContentFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = C305E9121B8B38B5008F53FF /* CanShareContentFunction.m */; };
-		C305E9571B8B38B5008F53FF /* CanShowAppInviteDialogFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = C305E9141B8B38B5008F53FF /* CanShowAppInviteDialogFunction.m */; };
 		C305E9581B8B38B5008F53FF /* CanShowGameRequestDialogFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = C305E9161B8B38B5008F53FF /* CanShowGameRequestDialogFunction.m */; };
 		C305E9591B8B38B5008F53FF /* GetAccessTokenFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = C305E9181B8B38B5008F53FF /* GetAccessTokenFunction.m */; };
 		C305E95A1B8B38B5008F53FF /* GetDeniedPermissionsFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = C305E91A1B8B38B5008F53FF /* GetDeniedPermissionsFunction.m */; };
@@ -35,7 +34,6 @@
 		C305E96A1B8B38B5008F53FF /* ShareLinkFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = C305E93A1B8B38B5008F53FF /* ShareLinkFunction.m */; };
 		C305E96B1B8B38B5008F53FF /* ShareOpenGraphStoryFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = C305E93C1B8B38B5008F53FF /* ShareOpenGraphStoryFunction.m */; };
 		C305E96C1B8B38B5008F53FF /* SharePhotoFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = C305E93E1B8B38B5008F53FF /* SharePhotoFunction.m */; };
-		C305E96D1B8B38B5008F53FF /* ShowAppInviteDialogFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = C305E9401B8B38B5008F53FF /* ShowAppInviteDialogFunction.m */; };
 		C305E96E1B8B38B5008F53FF /* ShowGameRequestDialogFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = C305E9421B8B38B5008F53FF /* ShowGameRequestDialogFunction.m */; };
 		C305E96F1B8B38B5008F53FF /* LogoutConfirmDialogDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C305E9441B8B38B5008F53FF /* LogoutConfirmDialogDelegate.m */; };
 		C305E9701B8B38B5008F53FF /* ProfileTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = C305E9461B8B38B5008F53FF /* ProfileTracker.m */; };
@@ -81,8 +79,6 @@
 		C305E9101B8B38B5008F53FF /* ApplicationOpenURLFunction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApplicationOpenURLFunction.m; sourceTree = "<group>"; };
 		C305E9111B8B38B5008F53FF /* CanShareContentFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CanShareContentFunction.h; sourceTree = "<group>"; };
 		C305E9121B8B38B5008F53FF /* CanShareContentFunction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CanShareContentFunction.m; sourceTree = "<group>"; };
-		C305E9131B8B38B5008F53FF /* CanShowAppInviteDialogFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CanShowAppInviteDialogFunction.h; sourceTree = "<group>"; };
-		C305E9141B8B38B5008F53FF /* CanShowAppInviteDialogFunction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CanShowAppInviteDialogFunction.m; sourceTree = "<group>"; };
 		C305E9151B8B38B5008F53FF /* CanShowGameRequestDialogFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CanShowGameRequestDialogFunction.h; sourceTree = "<group>"; };
 		C305E9161B8B38B5008F53FF /* CanShowGameRequestDialogFunction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CanShowGameRequestDialogFunction.m; sourceTree = "<group>"; };
 		C305E9171B8B38B5008F53FF /* GetAccessTokenFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetAccessTokenFunction.h; sourceTree = "<group>"; };
@@ -125,8 +121,6 @@
 		C305E93C1B8B38B5008F53FF /* ShareOpenGraphStoryFunction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareOpenGraphStoryFunction.m; sourceTree = "<group>"; };
 		C305E93D1B8B38B5008F53FF /* SharePhotoFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SharePhotoFunction.h; sourceTree = "<group>"; };
 		C305E93E1B8B38B5008F53FF /* SharePhotoFunction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SharePhotoFunction.m; sourceTree = "<group>"; };
-		C305E93F1B8B38B5008F53FF /* ShowAppInviteDialogFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowAppInviteDialogFunction.h; sourceTree = "<group>"; };
-		C305E9401B8B38B5008F53FF /* ShowAppInviteDialogFunction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowAppInviteDialogFunction.m; sourceTree = "<group>"; };
 		C305E9411B8B38B5008F53FF /* ShowGameRequestDialogFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowGameRequestDialogFunction.h; sourceTree = "<group>"; };
 		C305E9421B8B38B5008F53FF /* ShowGameRequestDialogFunction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowGameRequestDialogFunction.m; sourceTree = "<group>"; };
 		C305E9431B8B38B5008F53FF /* LogoutConfirmDialogDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogoutConfirmDialogDelegate.h; sourceTree = "<group>"; };
@@ -186,8 +180,6 @@
 				C305E9101B8B38B5008F53FF /* ApplicationOpenURLFunction.m */,
 				C305E9111B8B38B5008F53FF /* CanShareContentFunction.h */,
 				C305E9121B8B38B5008F53FF /* CanShareContentFunction.m */,
-				C305E9131B8B38B5008F53FF /* CanShowAppInviteDialogFunction.h */,
-				C305E9141B8B38B5008F53FF /* CanShowAppInviteDialogFunction.m */,
 				C305E9151B8B38B5008F53FF /* CanShowGameRequestDialogFunction.h */,
 				C305E9161B8B38B5008F53FF /* CanShowGameRequestDialogFunction.m */,
 				C305E9171B8B38B5008F53FF /* GetAccessTokenFunction.h */,
@@ -230,8 +222,6 @@
 				C305E93C1B8B38B5008F53FF /* ShareOpenGraphStoryFunction.m */,
 				C305E93D1B8B38B5008F53FF /* SharePhotoFunction.h */,
 				C305E93E1B8B38B5008F53FF /* SharePhotoFunction.m */,
-				C305E93F1B8B38B5008F53FF /* ShowAppInviteDialogFunction.h */,
-				C305E9401B8B38B5008F53FF /* ShowAppInviteDialogFunction.m */,
 				C305E9411B8B38B5008F53FF /* ShowGameRequestDialogFunction.h */,
 				C305E9421B8B38B5008F53FF /* ShowGameRequestDialogFunction.m */,
 				C39E46741B987FF20033123C /* FetchDeferredAppLinkFunction.h */,
@@ -333,10 +323,11 @@
 			};
 			buildConfigurationList = C3CC10F61B8B382800C34EC1 /* Build configuration list for PBXProject "AIRFacebook" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = C3CC10F21B8B382800C34EC1;
 			productRefGroup = C3CC10FC1B8B382800C34EC1 /* Products */;
@@ -355,7 +346,6 @@
 			files = (
 				C32B1868201D2FD600912AC4 /* IsSupportedFunction.m in Sources */,
 				C305E95B1B8B38B5008F53FF /* GetExpirationTimestampFunction.m in Sources */,
-				C305E9571B8B38B5008F53FF /* CanShowAppInviteDialogFunction.m in Sources */,
 				C305E95D1B8B38B5008F53FF /* GetSDKVersionFunction.m in Sources */,
 				C305E95F1B8B38B5008F53FF /* InitFunction.m in Sources */,
 				C305E9711B8B38B5008F53FF /* ShareContentDelegate.m in Sources */,
@@ -363,7 +353,6 @@
 				C305E9691B8B38B5008F53FF /* SendOpenGraphRequestFunction.m in Sources */,
 				C305E95A1B8B38B5008F53FF /* GetDeniedPermissionsFunction.m in Sources */,
 				C305E9591B8B38B5008F53FF /* GetAccessTokenFunction.m in Sources */,
-				C305E96D1B8B38B5008F53FF /* ShowAppInviteDialogFunction.m in Sources */,
 				C305E96E1B8B38B5008F53FF /* ShowGameRequestDialogFunction.m in Sources */,
 				C305E96F1B8B38B5008F53FF /* LogoutConfirmDialogDelegate.m in Sources */,
 				C305E9531B8B38B5008F53FF /* AIRFacebookShareType.m in Sources */,

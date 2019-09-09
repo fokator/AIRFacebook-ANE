@@ -9,10 +9,10 @@
 	<packagedDependency>libclang_rt.ios.a</packagedDependency>
         <packagedDependency>FBSDKCoreKit.framework</packagedDependency>
         <packagedDependency>FBSDKLoginKit.framework</packagedDependency>
-        <packagedDependency>FBSDKMessengerShareKit.framework</packagedDependency>
+        <!-- <packagedDependency>FBSDKMessengerShareKit.framework</packagedDependency> -->
         <packagedDependency>FBSDKShareKit.framework</packagedDependency>
         <packagedDependency>Bolts.framework</packagedDependency>
         <packagedDependency>AIRExtHelpers.framework</packagedDependency>
     </packagedDependencies>
-    
+
 </platform>

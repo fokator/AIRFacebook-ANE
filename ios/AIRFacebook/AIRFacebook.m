@@ -37,8 +37,6 @@
 #import "Functions/ShareLinkFunction.h"
 #import "Functions/SharePhotoFunction.h"
 #import "Functions/ShareOpenGraphStoryFunction.h"
-#import "Functions/CanShowAppInviteDialogFunction.h"
-#import "Functions/ShowAppInviteDialogFunction.h"
 #import "Functions/CanShowGameRequestDialogFunction.h"
 #import "Functions/ShowGameRequestDialogFunction.h"
 #import "Functions/SendOpenGraphRequestFunction.h"
@@ -171,8 +169,6 @@ void AIRFacebookContextInitializer( void* extData,
         { (const uint8_t*) "shareMessageWithLink", 0, fb_shareLink },
         { (const uint8_t*) "shareMessageWithPhoto", 0, fb_sharePhoto },
         { (const uint8_t*) "shareOpenGraphStory", 0, fb_shareOpenGraphStory },
-        { (const uint8_t*) "canShowAppInviteDialog", 0, fb_canShowAppInviteDialog },
-        { (const uint8_t*) "showAppInviteDialog", 0, fb_showAppInviteDialog },
         { (const uint8_t*) "canShowGameRequestDialog", 0, fb_canShowGameRequestDialog },
         { (const uint8_t*) "showGameRequestDialog", 0, fb_showGameRequestDialog },
         /* Misc */

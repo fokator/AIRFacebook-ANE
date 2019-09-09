@@ -34,9 +34,6 @@
     if( [value isEqualToString:@"OPEN_GRAPH"] ) {
         return AIRFBShareType_OPEN_GRAPH;
     }
-    if( [value isEqualToString:@"APP_INVITE"] ) {
-        return AIRFBShareType_APP_INVITE;
-    }
     if( [value isEqualToString:@"GAME_REQUEST"] ) {
         return AIRFBShareType_GAME_REQUEST;
     }
@@ -55,8 +52,6 @@
             return @"MESSAGE_PHOTO";
         case AIRFBShareType_OPEN_GRAPH:
             return @"OPEN_GRAPH";
-        case AIRFBShareType_APP_INVITE:
-            return @"APP_INVITE";
         case AIRFBShareType_GAME_REQUEST:
             return @"GAME_REQUEST";
     }

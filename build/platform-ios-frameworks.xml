@@ -4,7 +4,7 @@
 		<option>-ios_version_min 8.0</option>
 		<option>-framework FBSDKCoreKit</option>
 		<option>-framework FBSDKShareKit</option>
-		<option>-framework FBSDKMessengerShareKit</option>
+		<!-- <option>-framework FBSDKMessengerShareKit</option> -->
 		<option>-framework FBSDKLoginKit</option>
 		<option>-framework Bolts</option>
 		<option>-framework UIKit</option>
@@ -18,5 +18,5 @@
     <packagedDependencies>
 		<packagedDependency>AIRExtHelpers.framework</packagedDependency>
     </packagedDependencies>
-    
+
 </platform>
