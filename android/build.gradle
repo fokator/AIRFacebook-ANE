@@ -20,12 +20,12 @@ repositories {
 }
 
 dependencies {
-    implementation 'com.facebook.android:facebook-core:[4,5)'
-    implementation 'com.facebook.android:facebook-login:[4,5)'
-    implementation 'com.facebook.android:facebook-share:[4,5)'
-    implementation 'com.facebook.android:facebook-places:[4,5)'
-    implementation 'com.facebook.android:facebook-messenger:[4,5)'
-    implementation 'com.facebook.android:facebook-applinks:[4,5)'
+    implementation 'com.facebook.android:facebook-core:[5,9)'
+    implementation 'com.facebook.android:facebook-login:[5,9)'
+    implementation 'com.facebook.android:facebook-share:[5,9)'
+    implementation 'com.facebook.android:facebook-places:[5,9)'
+    implementation 'com.facebook.android:facebook-messenger:[5,9)'
+    implementation 'com.facebook.android:facebook-applinks:[5,9)'
     compile files('libs/FlashRuntimeExtensions.jar')
 }
 

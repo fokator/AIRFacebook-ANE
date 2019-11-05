@@ -61,6 +61,20 @@ NS_SWIFT_NAME(AppLinkUtility)
  */
 + (void)fetchDeferredAppLink:(nullable FBSDKURLBlock)handler;
 
+/*
+  Call this method to fetch promotion code from the url, if it's present.
+
+ @param url App Link url that was passed to the app.
+
+ @return Promotion code string.
+
+
+ Call this method to fetch App Invite Promotion Code from applink if present.
+ This can be used to fetch the promotion code that was associated with the invite when it
+ was created. This method should be called with the url from the openURL method.
+*/
++ (nullable NSString *)appInvitePromotionCodeFromURL:(NSURL *)url;
+
 @end
 
 NS_ASSUME_NONNULL_END

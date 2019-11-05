@@ -109,12 +109,14 @@
         <copy file="../android/libs/bolts-applinks-1.4.0.jar" tofile="temp/android/bolts-applinks-1.4.0.jar" overwrite="true" />
         <copy file="../android/libs/bolts-tasks-1.4.0.jar" tofile="temp/android/bolts-tasks-1.4.0.jar" overwrite="true" />
         <copy file="../android/libs/google-zxing-3.3.3.jar" tofile="temp/android/google-zxing-3.3.3.jar" overwrite="true" />
-        <copy file="../android/libs/facebook-applinks-5.5.0.jar" tofile="temp/android/facebook-applinks-5.5.0.jar" overwrite="true" />
-        <copy file="../android/libs/facebook-common-5.5.0.jar" tofile="temp/android/facebook-common-5.5.0.jar" overwrite="true" />
-        <copy file="../android/libs/facebook-core-5.5.0.jar" tofile="temp/android/facebook-core-5.5.0.jar" overwrite="true" />
-        <copy file="../android/libs/facebook-login-5.5.0.jar" tofile="temp/android/facebook-login-5.5.0.jar" overwrite="true" />
-        <copy file="../android/libs/facebook-messenger-5.5.0.jar" tofile="temp/android/facebook-messenger-5.5.0.jar" overwrite="true" />
-        <copy file="../android/libs/facebook-share-5.5.0.jar" tofile="temp/android/facebook-share-5.5.0.jar" overwrite="true" />
+
+        <copy file="../android/libs/facebook-applinks-5.9.0.jar" tofile="temp/android/facebook-applinks-5.9.0.jar" overwrite="true" />
+        <copy file="../android/libs/facebook-common-5.9.0.jar" tofile="temp/android/facebook-common-5.9.0.jar" overwrite="true" />
+        <copy file="../android/libs/facebook-core-5.9.0.jar" tofile="temp/android/facebook-core-5.9.0.jar" overwrite="true" />
+        <copy file="../android/libs/facebook-login-5.9.0.jar" tofile="temp/android/facebook-login-5.9.0.jar" overwrite="true" />
+        <copy file="../android/libs/facebook-messenger-5.9.0.jar" tofile="temp/android/facebook-messenger-5.9.0.jar" overwrite="true" />
+        <copy file="../android/libs/facebook-share-5.9.0.jar" tofile="temp/android/facebook-share-5.9.0.jar" overwrite="true" />
+
         <!-- copy resources -->
         <copy todir="temp/android/com.marpies.ane.facebook-common-res/">
             <fileset dir="../android/com.marpies.ane.facebook-common-res/"/>
